@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Profil from './Profil/Profil';
+import img from './image.jfif';
+
 
 function App() {
+
+  const handleName = (v)=>{
+    alert(v);
+}
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <Profil fullName="sabrine ben sassi" bio="it-engineering" profession='IT-Engineering' fnc={handleName}  >
+        <img src={img} alt="image profil"/>
+
+      </Profil>
+      {/* <button onClick={qfff}>non</button> */}
     </div>
   );
 }
